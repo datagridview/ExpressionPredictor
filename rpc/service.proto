@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+
+service Predictor {
+  rpc Predict (PredictRequest) returns (PredictReply) {}
+}
+
+message PredictRequest {
+   string type = 1;
+   string filename = 2;
+}
+
+message PredictReply {
+  repeated string output = 3;
+}
